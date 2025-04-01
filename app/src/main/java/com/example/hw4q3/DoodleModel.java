@@ -19,7 +19,7 @@ public class DoodleModel
     //method points to a color
     public void nextColor()
     {
-        color = (color + 1) & 8;
+        color = (color + 1) % 8;
     }
 
     //method adds a point to the list of point
