@@ -13,6 +13,9 @@ public class GraphicsView extends View
     private DoodleModel doodle;
     private Paint paint;
 
+    //array store square location
+    private float[] squareLocation;
+
     //String of colors
     String[] colorsArray = {
             "#000000", // Black
@@ -76,7 +79,7 @@ public class GraphicsView extends View
 
     }
 
-    //method draws square on the bottom right corner 
+    //method draws square on the bottom right corner
     private void drawSquare(Canvas canvas, int color)
     {
         // Get canvas dimensions
@@ -98,6 +101,15 @@ public class GraphicsView extends View
 
         // Draw the square
         canvas.drawRect(left, top, right, bottom, paint);
+
+        //storing square location in an array
+        squareLocation = new float[]{left, top, right, bottom};
+    }
+
+    //method returns the square location
+    public float[] getSquareLocation()
+    {
+        return squareLocation;
     }
 
 
