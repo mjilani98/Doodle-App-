@@ -96,7 +96,7 @@ public class GraphicsView extends View
         float bottom = canvasHeight - 200; // 30px margin
 
         // Set paint color to the current selection
-        paint.setColor(Color.parseColor(colorsArray[color - 1]));
+        paint.setColor(Color.parseColor(colorsArray[doodle.getColor()]));
         paint.setStyle(Paint.Style.FILL);
 
         // Draw the square
