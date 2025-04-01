@@ -60,7 +60,7 @@ public class GraphicsView extends View
              color = point.color;
 
             //convert color code to rgb and set color
-            paint.setColor(Color.parseColor(colorsArray[color-1]));
+            paint.setColor(Color.parseColor(colorsArray[color]));
 
             //get x,y of point
             float x = point.x;
@@ -71,7 +71,7 @@ public class GraphicsView extends View
         }
 
         //get current color
-        paint.setColor(Color.parseColor(colorsArray[color-1]));
+        paint.setColor(Color.parseColor(colorsArray[doodle.getColor()]));
         paint.setStyle(Paint.Style.FILL);
 
         //draw filled square at right bottom corner
